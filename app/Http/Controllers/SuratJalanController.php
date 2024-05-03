@@ -14,7 +14,8 @@ class SuratJalanController extends Controller
     public function index()
     {
         $suratJalan = suratJalan::all();
-        return view('suratJalan.index')->with('surat_jalans', $suratJalan);
+        $title="suratJalan";
+        return view('suratJalan.index', compact('suratJalan', 'title'));
     }
 
     /**
@@ -25,7 +26,7 @@ class SuratJalanController extends Controller
         $suratJalan = suratJalan::all();
         return view('suratJalan.create')->with('surat_jalans', $suratJalan);
 
-        
+
 
 
     }
