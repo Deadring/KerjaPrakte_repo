@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('mutasis', function (Blueprint $table) {
             $table->uuid('id');
             $table->primary('id');
-            $table->string('jenis_kerusakan');
-            $table->timestamp('tanggal_terima');
-            $table->timestamp('tanggal_kirim');
+            $table->string('kerusakan');
+            $table->date('tanggal_terima');
+            $table->date('tanggal_kirim');
             $table->timestamps();
         });
     }
